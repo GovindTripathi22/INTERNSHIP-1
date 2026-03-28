@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Golf Clarity | Impact-Driven Competition",
-  description: "The premier golf subscription platform where every score generates charitable impact. Join the technical revolution of giving.",
+  description: "The premier golf subscription platform where every score generates charitable impact. Join the professional athletic protocol for global impact.",
 };
 
 export default function RootLayout({
@@ -28,16 +28,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${manrope.variable} ${spaceGrotesk.variable} font-sans selection:bg-primary/30 antialiased`}>
-        <div className="relative min-h-screen flex flex-col bg-background selection:bg-primary/20">
-          {/* Subtle Global Glows */}
-          <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute top-0 left-1/4 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[160px]" />
-            <div className="absolute bottom-0 right-1/4 w-[800px] h-[600px] bg-secondary/3 rounded-full blur-[160px]" />
-          </div>
+      <body className={`${manrope.variable} ${spaceGrotesk.variable} font-sans bg-[#0e0e0e] text-white antialiased selection:bg-primary/30`}>
+        {/* Environmental Layers */}
+        <div className="mesh-gradient-bg" />
+        <div className="grain-overlay" />
+        
+        {/* Perspective Fragments */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-[0]">
+          <div className="glass-shard w-64 h-64 top-[10%] left-[-5%] rotate-12 opacity-10" />
+          <div className="glass-shard w-96 h-96 bottom-[15%] right-[-10%] -rotate-12 opacity-15" />
+          <div className="glass-shard w-48 h-48 top-[60%] left-[85%] rotate-45 opacity-10" />
+        </div>
 
+        <div className="relative min-h-screen flex flex-col z-10">
           <Navbar />
-          <main className="flex-grow pt-20 relative z-10">
+          <main className="flex-grow pt-20">
             {children}
           </main>
           <Footer />
